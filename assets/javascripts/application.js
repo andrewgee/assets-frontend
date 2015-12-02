@@ -11,6 +11,7 @@ var sso = require('./modules/sso.js'),
     form = require('./validation/form.js'),
     control = require('./modules/control.js'),
     toggle = require('./modules/toggle.js'),
+    visibility = require('./modules/visibility.js'),
     contentNudge = require('./modules/contentNudge.js'),
     tableRowClick = require('./modules/tableRowClick.js'),
     feedbackForms = require('./modules/feedbackForms.js'),
@@ -134,6 +135,7 @@ $(function() {
   form().init();
   control().init();
   toggle().init();
+  visibility().init();
   toggleDynamicFormFields();
 
   //TODO: replace toggleDynamicFormField usage in all exemplars and rename this function
