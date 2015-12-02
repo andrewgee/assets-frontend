@@ -7,6 +7,12 @@ module.exports = function () {
     return /^[A-Za-z]{2}\d{6}[A-Za-z]$/.test(value);
   });
 
+  // Use the pattern attribute on your input with a valid regex
+  jQuery.validator.addMethod('pattern', function (value, element, pattern) {
+    var regex = new RegExp(pattern);
+    return regex.test(value);
+  });
+
   // Check if value of input is correctly contained in suggestion data
   jQuery.validator.addMethod('suggestion', function (value, element) {
     var suggestions;
@@ -26,12 +32,6 @@ module.exports = function () {
     });
 
     return validSuggestion;
-  });
-
-  // Use the pattern attribute on your input with a valid regex
-  jQuery.validator.addMethod('pattern', function (value, element, pattern) {
-    var regex = new RegExp(pattern);
-    return regex.test(value);
   });
 
 };

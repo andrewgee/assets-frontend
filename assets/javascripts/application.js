@@ -7,11 +7,11 @@ require('govuk-template');
 window._gaq = window._gaq || [];
 
 var sso = require('./modules/sso.js'),
-    autoCompleteFactory = require('./modules/autoCompleteFactory.js'),
+    visibility = require('./modules/visibility.js'),
+    toggle = require('./modules/toggle.js'),
     form = require('./validation/form.js'),
     control = require('./modules/control.js'),
-    toggle = require('./modules/toggle.js'),
-    visibility = require('./modules/visibility.js'),
+    autoCompleteFactory = require('./modules/autoCompleteFactory.js'),
     contentNudge = require('./modules/contentNudge.js'),
     tableRowClick = require('./modules/tableRowClick.js'),
     feedbackForms = require('./modules/feedbackForms.js'),
@@ -131,11 +131,11 @@ $(function() {
   }
 
   sso().init();
-  autoCompleteFactory().init();
+  visibility().init();
+  toggle().init();
   form().init();
   control().init();
-  toggle().init();
-  visibility().init();
+  autoCompleteFactory().init();
   toggleDynamicFormFields();
 
   //TODO: replace toggleDynamicFormField usage in all exemplars and rename this function
