@@ -33,5 +33,5 @@ module.exports = function () {
     var regex = new RegExp(pattern);
     return regex.test(value);
   });
-  
+
 };
