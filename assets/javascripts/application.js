@@ -10,6 +10,7 @@ var sso = require('./modules/sso.js'),
     autoCompleteFactory = require('./modules/autoCompleteFactory.js'),
     form = require('./validation/form.js'),
     control = require('./modules/control.js'),
+    toggle = require('./modules/toggle.js'),
     contentNudge = require('./modules/contentNudge.js'),
     tableRowClick = require('./modules/tableRowClick.js'),
     feedbackForms = require('./modules/feedbackForms.js'),
@@ -132,6 +133,7 @@ $(function() {
   autoCompleteFactory().init();
   form().init();
   control().init();
+  toggle().init();
   toggleDynamicFormFields();
 
   //TODO: replace toggleDynamicFormField usage in all exemplars and rename this function
