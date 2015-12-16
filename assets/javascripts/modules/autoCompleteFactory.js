@@ -14,8 +14,4 @@ var init = function () {
   // add other auto compeltes here
 };
 
-module.exports = function () {
-  return {
-    init: init
-  };
-};
+module.exports = {init: init};

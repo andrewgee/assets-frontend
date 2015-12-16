@@ -104,8 +104,4 @@ var init = function () {
   }
 };
 
-module.exports = function () {
-  return {
-    init: init
-  };
-};
+module.exports = {init: init};
